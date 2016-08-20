@@ -1,0 +1,15 @@
+Refs/
+
+Tril/bin/
+Tril/obj/
+
+Tril.App/bin/
+Tril.App/obj/
+
+Tril.Attributes/bin/
+Tril.Attributes/obj/
+
+Tril.Translators/bin/
+Tril.Translators/obj/
+
+*.txt

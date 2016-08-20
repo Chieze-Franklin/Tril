@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tril.App", "Tril.App\Tril.App.csproj", "{6B859616-B82D-411C-9A21-384760716C29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Technical Notes", "Technical Notes", "{31A87B06-B0D0-4F9E-8940-97FBAD14CC7A}"
+	ProjectSection(SolutionItems) = preProject
+		CLS Compliance.txt = CLS Compliance.txt
+		Namesakes.txt = Namesakes.txt
+		Outline.txt = Outline.txt
+		Stack Transition.txt = Stack Transition.txt
+		Tril Models.txt = Tril Models.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tril.Attributes", "Tril.Attributes\Tril.Attributes.csproj", "{BA1E3DE6-AB51-4EB2-85A3-062FAAA62875}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{DE06CABE-A5A3-46AE-AAF6-0A4C681B6F16}"
+	ProjectSection(SolutionItems) = preProject
+		Advantages of Mono.txt = Advantages of Mono.txt
+		Class Hierarchy.txt = Class Hierarchy.txt
+		Diffs Btw Mono and .NET.txt = Diffs Btw Mono and .NET.txt
+		Disadvantages of Mono.txt = Disadvantages of Mono.txt
+		TODO (Borrowed).txt = TODO (Borrowed).txt
+		TODO in Version 2.txt = TODO in Version 2.txt
+		TODO.txt = TODO.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tril", "Tril\Tril.csproj", "{9A837F72-D8C6-4403-A90A-F4BD32D49604}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tril.Translators", "Tril.Translators\Tril.Translators.csproj", "{FE2BFE7D-CF9E-4E45-9FA8-2B867E820961}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B859616-B82D-411C-9A21-384760716C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B859616-B82D-411C-9A21-384760716C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B859616-B82D-411C-9A21-384760716C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B859616-B82D-411C-9A21-384760716C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1E3DE6-AB51-4EB2-85A3-062FAAA62875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1E3DE6-AB51-4EB2-85A3-062FAAA62875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1E3DE6-AB51-4EB2-85A3-062FAAA62875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1E3DE6-AB51-4EB2-85A3-062FAAA62875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A837F72-D8C6-4403-A90A-F4BD32D49604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A837F72-D8C6-4403-A90A-F4BD32D49604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A837F72-D8C6-4403-A90A-F4BD32D49604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A837F72-D8C6-4403-A90A-F4BD32D49604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2BFE7D-CF9E-4E45-9FA8-2B867E820961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2BFE7D-CF9E-4E45-9FA8-2B867E820961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2BFE7D-CF9E-4E45-9FA8-2B867E820961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2BFE7D-CF9E-4E45-9FA8-2B867E820961}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

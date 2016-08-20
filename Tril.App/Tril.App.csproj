@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B859616-B82D-411C-9A21-384760716C29}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tril.App</RootNamespace>
+    <AssemblyName>Tril.App</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\..\..\..\..\Downloads\SharpDevelop\SharpDevelop_4.3.0.9338_Beta_Source\src\Tools\OpenCover\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="FileSystemServices.cs" />
+    <Compile Include="TranslationPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TranslationPage.Designer.cs">
+      <DependentUpon>TranslationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranslatorPlugIn.cs" />
+    <Compile Include="WfaMainWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WfaMainWin.Designer.cs">
+      <DependentUpon>WfaMainWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Translation.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tril.Attributes\Tril.Attributes.csproj">
+      <Project>{ba1e3de6-ab51-4eb2-85a3-062faaa62875}</Project>
+      <Name>Tril.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tril.Translators\Tril.Translators.csproj">
+      <Project>{fe2bfe7d-cf9e-4e45-9fa8-2b867e820961}</Project>
+      <Name>Tril.Translators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tril\Tril.csproj">
+      <Project>{9a837f72-d8c6-4403-a90a-f4bd32d49604}</Project>
+      <Name>Tril</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewTranslation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveTranslation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransBundle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransBundleDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransBundleFailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransEvent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransEventDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransEventFailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransField.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransFieldDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransFieldFailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransKind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransKindDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransKindFailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TranslatorPlugins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransMethod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransMethodDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransMethodFailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransPackage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransPackageDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransPackageFailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransProperty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransPropertyDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransPropertyFailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveTranslationAs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <None Include="Resources\CloseTranslation.png" />
+    <None Include="Resources\RunTranslation.png" />
+    <None Include="Resources\Play.png" />
+    <None Include="Resources\OpenTranslation.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\MethodTransCodes.png" />
+    <None Include="Resources\MethodStack.png" />
+    <None Include="Resources\MethodReports.png" />
+    <None Include="Resources\MethodProcIL.png" />
+    <None Include="Resources\MethodLocals.png" />
+    <None Include="Resources\MethodCurrIL.png" />
+    <None Include="Resources\SelectAll.png" />
+    <None Include="Resources\Expand.png" />
+    <None Include="Resources\Cut.png" />
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".tr">
+      <Visible>False</Visible>
+      <Description>Translation File</Description>
+      <Progid>1</Progid>
+      <DefaultIcon>Icon.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
